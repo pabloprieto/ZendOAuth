@@ -75,6 +75,9 @@ class Client extends HttpClient
      */
     public function getAdapter()
     {
+        if (!$this->adapter) {
+            parent::getAdapter();
+        }
         return $this->adapter;
     }
 
